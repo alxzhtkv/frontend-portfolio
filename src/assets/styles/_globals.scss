@@ -1,0 +1,12 @@
+// src/assets/styles/_globals.scss
+$primary-color: #3498db;
+$font-size-base: 16px;
+
+@mixin button($bg-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
