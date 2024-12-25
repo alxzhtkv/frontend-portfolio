@@ -61,12 +61,12 @@
   border-left: 1px solid #d2cbc6;
 }
 
-.progress-bar_inner{
+.progress-bar_inner {
   background-color: #d2cbc6;
   width: 100%;
 }
 
-.header{
+.header {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
@@ -81,5 +81,44 @@
   border-right: 1px solid #d2cbc6;
   left: 0;
   top: 0;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.section {
+  height: 300dvw;
+  position: relative;
+  background-color: #bfbfbf;
+}
+
+.section-item {
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+  background: #494645;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.items{
+  display: flex;
+  gap:0;
+}
+
+.item{
+  height: 100dvh;
+  width: 100vw;
+}
+
+.first-slide {
+  background: #bfbfbf;
+}
+
+.second-slide {
+  background-color: red;
+  // background: #000000;
+}
+
+.third-slide {
+  background: #494645;
 }
