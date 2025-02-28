@@ -1,0 +1,39 @@
+.section {
+  height: 300dvw;
+  position: relative;
+  background-color: #bfbfbf;
+}
+
+.section-item {
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+  background: #494645;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  gap: 0;
+}
+
+.item {
+  height: 100dvh;
+  width: 100vw;
+}
+
+.first-slide {
+  background-color: #000000;
+  // background: #bfbfbf;
+}
+
+.second-slide {
+  background-color: red;
+  // background: #000000;
+}
+
+.third-slide {
+  background: #494645;
+}

@@ -1,23 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { Slider } from "@widgets/slider";
 import "./App.scss";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 function App() {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-
   return (
     <div className="main-wrapper">
-      <section className="section" ref={targetRef}>
-        <div className="section-item ">
-          <motion.div style={{ x }} className="items">
-            <div className="item first-slide"></div>
-            <div className="item second-slide"></div>
-            <div className="item third-slide"></div>
-          </motion.div>
-        </div>
-      </section>
+      <Slider />
+      <div className="test">
+
+      </div>
+      
+      <div className="framer">
+        <div className="pattern-image" />
+      </div>
     </div>
 
     // <div className="main-wrapper">

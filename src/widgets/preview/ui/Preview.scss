@@ -1,0 +1,115 @@
+.preview_container {
+  //   background-color: $bla;
+  //   color: $gray-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.preview_text-container {
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview_text {
+  display: flex;
+  align-self: center;
+  width: 100%;
+
+  font-size: 56px;
+  color: white;
+  //   @include h1;
+  text-transform: uppercase;
+  position: relative;
+  translate: none;
+  rotate: none;
+  scale: none;
+  display: flex;
+  justify-content: center;
+}
+
+// .pupu {
+//   @include body-semibold;
+//   text-transform: uppercase;
+//   color: $gray-color;
+//   width: 100%;
+//   text-align: center;
+// }
+.preview_text-item {
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &:nth-child(2) {
+    left: 100%;
+  }
+  &:nth-child(3) {
+    left: -100%;
+  }
+}
+
+// .bg_canvas {
+//   z-index: 2999;
+//   // position: fixed;
+//   width: 100vw;
+//   height: 100vh;
+//   top: 0;
+//   left: 0;
+//   pointer-events: none;
+//   mix-blend-mode: difference;
+//   overflow: hidden;
+//   // background-color: #efefef;
+// }
+
+.preview_text-absolute_item {
+  color: red;
+}
+
+.preview_text_smallprint {
+  position: absolute;
+  z-index: 2;
+  align-self: center;
+  top: 88%;
+
+  // color: $gray-color;
+  font-family: "PP Mori";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 26.25px;
+  letter-spacing: -0.04em;
+  text-align: left;
+
+  &:nth-child(2) {
+    left: 0;
+  }
+  &:nth-child(3) {
+    top: 88%;
+  }
+  &:nth-child(4) {
+    right: 0;
+  }
+
+  > p {
+    // @include body;
+    text-transform: none;
+  }
+}
+
+.preview_text-phrase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  //   > h1 {
+  //     @include h1;
+  //   }
+}
