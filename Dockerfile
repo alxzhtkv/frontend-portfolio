@@ -1,33 +1,35 @@
-FROM node:20-alpine as BUILD_IMAGE
+# FROM node:20-alpine
+
+# WORKDIR /app
+
+# COPY package*.json .
+
+# RUN npm ci 
+
+# COPY . . 
+
+# CMD [ "npm", "run", "build" ]
+
+
+
+FROM node:22-alpine AS build-stage
 
 WORKDIR /app
 
-COPY package.json .
+COPY package*.json .
 
-RUN npm install
-
-# RUN npm i -g serve
+RUN npm ci
 
 COPY . .
 
 RUN npm run build
 
-EXPOSE 3000
 
-CMD [ "npm", "run", "build" ]
 
-FROM node:20-alpine as PRODUCTION_IMAGE
+FROM nginx:alpine AS production-stage
 
-WORKDIR /app
+COPY --from=build-stage /app/dist /usr/share/nginx/html
 
-COPY --from=BUILD_IMAGE /app/dist/ /app/dist/
-EXPOSE 8080
+EXPOSE 80
 
-COPY package.json .
-COPY vite.config.ts .
-
-RUN npm install typescript
-EXPOSE 8080
-
-CMD [ "npm", "run", "preview" ]
-
+CMD ["nginx", "-g", "daemon off;"]
